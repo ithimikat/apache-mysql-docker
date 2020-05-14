@@ -1,0 +1,18 @@
+version: "3.1"
+
+services:
+  apache:
+    build: .
+    ports:
+      - 8080:80
+    restart: always
+    volumes:
+      - ./:/var/www/html
+
+  mysql:
+    image: mariadb
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: "cc"
