@@ -16,3 +16,8 @@ services:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: "cc"
+      MYSQL_DATABASE: "testing"
+      MYSQL_USER: "him"
+      MYSQL_PASSWORD: "los"
+    volumes:
+    - ./db:/var/lib/mysql
